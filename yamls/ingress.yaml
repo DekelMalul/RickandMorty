@@ -1,0 +1,14 @@
+# Source: whatismyip/templates/ingress.yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: rickandmorty
+spec:
+  ingressClassName: "nginx"
+  rules:
+  - host: rickandmorty.dekel.com  
+    http:  
+      paths:
+      - backend:
+          serviceName: rickandmorty
+          servicePort: 5000

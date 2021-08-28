@@ -1,0 +1,48 @@
+# Source: whatismyip/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rickandmorty
+  labels:
+    version: "0.0.1"
+    app: rickandmorty
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rickandmorty
+  template:
+    metadata: 
+      labels:
+        version: "0.0.1"
+        app: rickandmorty
+    spec:
+      containers:
+        - name: rickandmorty
+          image: keeperdekel/rickandmorty:0.0.1
+          resources:
+            limits:
+              cpu: 512m
+              memory: 1024Mi
+            requests:
+              cpu: 128m
+              memory: 128Mi
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
+              name: http
+              protocol: TCP
+          readinessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 20
+            failureThreshold: 10
