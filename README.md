@@ -17,7 +17,7 @@ Also you can enter the browser at `localhost:5000/characters_info` to get charac
 
 ## Yaml challange
 
-Inorder to check the challange ingress controller need to be deloyed on the cluster. 
+Inorder to check the challange nginx ingress controller need to be deloyed on the cluster. 
 
 After that you can apply all the reources and as follow:
 
