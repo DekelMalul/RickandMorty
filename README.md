@@ -1,6 +1,6 @@
 # Rick and Morty
 
-Under `application` folder there is script for the first challenge.
+Under `application` folder there is a script for the first challenge.
 
 ## Dockerfile challange
 
