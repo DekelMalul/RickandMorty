@@ -12,4 +12,4 @@ USER flask
 
 EXPOSE 5000
 
-CMD ["python3","wsgi.py"]
+CMD ["python3","main.py"]
