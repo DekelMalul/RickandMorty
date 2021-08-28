@@ -53,7 +53,7 @@ Access the website at `ingress.hosts` field (`rickandmorty.dekel.com`)
 | `image.repository`                     | Docker image repository name                    | `keeperdekel/rickandmorty`                                |
 | `image.pullPolicy`                     | Image pull policy                               | `IfNotPresent`                                          |
 | `image.pullSecrets`                    | Docker registry secret names as an              | `{}`                                                    |
-| `image.tag`                            | Docker image tag                                | `0.0.2`                                                 |
+| `image.tag`                            | Docker image tag                                | `0.0.1`                                                 |
 | `nameOverride`                         | Overide the resources names                     | `coolname`                                              |
 | `replicaCount`                         | Number of replicas pods                         | `1`                                                     |
 | `PodAnnotations`                       | Custom pod annotaions                           | `{}`                                                    |
