@@ -1,7 +1,7 @@
 # RickandMorty
 
 This repo contains helm chart that will deploy rick and morty flask deployment that will serve
-requests on `rickandmorty.dekel.com\characters_info` 
+requests on `rickandmorty.dekel.com/characters_info` 
 
 
 ### Dockerfile
